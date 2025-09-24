@@ -85,7 +85,8 @@ body {
   width: 95%;
   display: flex;
   margin: 2rem;
-  margin-bottom: 0;   /* ✅ remove bottom gap */
+  margin-bottom: 0;
+  /* ✅ remove bottom gap */
 }
 
 .left-panel {
@@ -256,148 +257,316 @@ form {
 .submit-btn img {
   float: right;
 }
-
-/* ======= bottom info strip styles ======= */
-.bottom-strip {
-  max-width: 1300px;
-  margin-top: 0 !important;   /* ✅ remove top gap */
-  padding-top: 0 !important;  /* ✅ remove top gap */
+.section-two {
   background: #fff;
-  box-shadow: 0 4px 8px rgba(9,0,0,0.08);
-  
+  padding: 40px 20px;
 }
 
-.bottom-inner {
+.section-inner {
   display: flex;
-  gap: 0;
-  align-items: stretch;
-  
-}
-
-.bottom-col {
-  flex: 1;
-  padding: 22px;
-  border-right: 1px solid #e6e6e6;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  min-height: 220px;
-  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Container for DUI Box */
+.banner-box.dui-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+/* Inner flex for text + image */
+.dui-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
   
 }
-.bottom-col:last-child { border-right: none; }
 
-.left-inner {
+/* Main 3-column layout */
+.three-sections {
   display: flex;
-  gap: 18px;
-  align-items: center;
-  height: 100%;
-font-size: 20px;
+  justify-content: space-between;
+  gap: 30px;              /* spacing between sections */
+  background: #ffffff;    /* SAME background for all */
+  padding: 20px;
+  border: 1px solid #ddd; /* optional border */
 }
 
-.l
-eft-text { flex: 1; 
-  font-size: 20px;
+.dui-card,
+.law-container,
+.cert-container {
+  background: transparent;  /* remove their individual white */
+  box-shadow: none;         /* remove shadows */
 }
-.left-art img { width: 92px; height: auto; display: block; 
-  margin-bottom: 70px;
-}
-/* Shadow image above buttons */
-.btn-shadow {
-  display: block;
-  width: 100%;
-  max-width: 150px;   /* adjust to match your shadow.png */
-  height: auto;
-  margin: 0 auto 5px auto;  /* centers shadow and adds small gap */
+/* Each section */
+.section {
+   flex: 1;
+   padding: 0 20px;
 }
 
-
-.bottom-center {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+/* Divider between sections */
+.section:not(:last-child) {
+   border-right: 1px solid #e2e2e2;
 }
 
-.sub-card {
-  flex: 1;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  padding: 12px;
-  background: #fff;
-  border: 1px solid #f0f0f0;
+/* DUI CARD STYLING */
+
+
+
+.dui-text {
+   flex: 1;
 }
 
-.sub-text { flex: 1; }
-.sub-art img { width: 96px; height: auto; display: block; }
-/* Shadow image above buttons */
-.btn-shadow {
-  display: block;
-  width: 100%;
-  max-width: 150px;   /* adjust this to match your shadow.png size */
-  height: auto;
-  margin: 0 auto 6px auto;  /* centers shadow, small gap before button */
+.dui-heading-main {
+   font-family: Georgia, serif;
+   font-size: 20px;
+   font-weight: 700;
+   color: #222;
+   margin-bottom: 6px;
 }
 
-
-.right-top {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 12px;
+.dui-heading-highlight {
+   color: #8b1b1b;
 }
 
-.right-top img { width: 86px; height: auto; display: inline-block; }
-.right-bottom { text-align: left; }
-
-.bottom-title {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 6px 0;
-  color: #222;
-}
-.bottom-title span { color: #900; }
-
-.mini-title {
-  color: #900;
-  font-weight: 700;
-  margin: 6px 0;
+.dui-subheading {
+   color: #b81919;
+   font-size: 13px;
+   font-weight: 800;
+   margin: 6px 0 12px 0;
+   text-transform: uppercase;
+   letter-spacing: 0.8px;
 }
 
-.desc {
-  color: #333;
-  font-size: 14px;
-  margin: 6px 0;
-  line-height: 1.35;
+.dui-paragraph-1,
+.dui-paragraph-2 {
+   color: #333;
+   font-size: 17px;
+   line-height: 1;
+   margin-bottom: 10px;
 }
 
-.btn-red {
-  background: #900;
-  color: #fff;
-  border: none;
-  padding: 8px 14px;
-  font-weight: 700;
-  cursor: pointer;
-  border-radius: 2px;
-  margin-top: 10px;
-}
-.btn-red.small { padding: 6px 10px; font-size: 13px; }
-/* Shadow image above buttons */
-.btn-shadow {
-  display: block;
-  width: 100%;
-  max-width: 150px;   /* adjust size to match your shadow.png */
-  height: auto;
-  margin: 0 auto 6px auto;  /* center & add gap above button */
+.dui-paragraph-2 {
+   margin-bottom: 14px;
 }
 
+.dui-cta-row {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1px;
+   
+}
 
-@media (max-width: 920px) {
-  .bottom-inner { flex-direction: column; }
-  .bottom-col { border-right: none; }
-  .bottom-strip { padding: 12px; }
-  .left-art img, .sub-art img, .right-top img { width: 72px; }
+.dui-hr {
+   width: 250px;
+   margin-bottom: 8px;
+}
+
+.dui-cta {
+   background: linear-gradient(#c31b1b, #8b0f0f);
+   width: 110px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 800;
+   padding: 10px 16px;
+   border-radius: 2px;
+   font-size: 13px;
+   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.18);
+   text-align: center;
+   position: relative;
+   left: 60px;
+}
+
+.dui-cta::after {
+   content: "";
+   display: inline-block;
+   margin-left: 10px;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-left: 8px solid #fff;
+}
+
+.dui-image img {
+   width: 80px;
+   position: relative;
+   top: -190px;
+   left: 220px;
+}
+
+/* LAW BLOG & CASE RESULTS */
+.law-container {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   background: #fff;
+}
+
+.law-box {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+}
+
+.law-heading {
+   font-size: 20px;
+   font-weight: bold;
+   margin-bottom: 8px;
+   white-space: nowrap;
+}
+
+.law-text,
+.case-text {
+   color: #000;
+}
+
+.blog-text,
+.results-text {
+   color: #cc0000;
+}
+
+.law-paragraph {
+   font-size: 15px;
+   color: #555;
+   margin-bottom: 12px;
+   white-space: nowrap;
+}
+
+.law-cta-row {
+   position: relative;
+   display: inline-block;
+}
+
+.law-cta {
+   width: 117px;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 800;
+   padding: 10px 16px;
+   border-radius: 2px;
+   font-size: 13px;
+   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.18);
+   display: inline-block;
+   position: relative;
+   left: 10px;
+}
+
+.law-cta::after {
+   content: "";
+   display: inline-block;
+   margin-left: 10px;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-left: 8px solid #fff;
+}
+
+.law-hr {
+   position: absolute;
+   top: -8px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 220px;
+}
+
+.blog-cta {
+   background: linear-gradient(#c31b1b, #8b0f0f);
+}
+
+.blog-hr {
+   width: 250px;
+}
+
+.blog-box .law-image {
+   max-width: 200px;
+}
+
+.case-cta {
+   background: linear-gradient(#c31b1b, #8b0f0f);
+}
+
+.case-hr {
+   width: 270px;
+}
+
+.case-box .law-image {
+   max-width: 240px;
+   margin-top: 10px;
+}
+
+/* CERTIFICATES */
+.cert-container {
+   text-align: center;
+   background: #fff;
+   padding: 20px;
+}
+
+.cert-images {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-bottom: 15px;
+}
+
+.avo-rating-large {
+   width: 120px;
+}
+
+.national-college-small {
+   width: 100px;
+}
+
+.cert-heading {
+   font-size: 20px;
+   font-weight: bold;
+   margin-bottom: 8px;
+}
+
+.cert-black {
+   color: #000;
+}
+
+.cert-red {
+   color: #cc0000;
+}
+
+.cert-paragraph {
+   font-size: 14px;
+   color: #555;
+   margin-bottom: 12px;
+   line-height: 1.5;
+}
+
+.cert-shadow {
+   width: 220px;
+   margin: 0 auto 15px auto;
+   display: block;
+}
+
+.cert-btn {
+   background: linear-gradient(#c31b1b, #8b0f0f);
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+   padding: 10px 18px;
+   border-radius: 2px;
+   font-size: 13px;
+   width: 120px;
+   display: inline-block;
+   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.18);
+}
+
+.cert-btn::after {
+   content: "";
+   display: inline-block;
+   margin-left: 10px;
+   border-top: 6px solid transparent;
+   border-bottom: 6px solid transparent;
+   border-left: 8px solid #fff;
 }
